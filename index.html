@@ -1,50 +1,97 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的个人博客</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>孙杨的大学主页</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- 头部背景图 -->
-  <header class="blog-header">
-    <img src="https://picsum.photos/id/10/1200/400" alt="富士山背景" class="header-bg">
-  </header>
+    <!-- 顶部横幅 -->
+    <div class="header-banner">
+        <img src="banner-bg.jpg" alt="背景横幅" class="banner-bg">
+        <h1 class="title">孙杨的大学主页</h1>
+    </div>
 
-  <!-- 导航栏 -->
-  <nav class="blog-nav">
-    <a href="#" class="nav-item">首页</a>
-    <a href="#" class="nav-item active">短文</a>
-    <a href="#" class="nav-item">日志</a>
-    <a href="#" class="nav-item">留言板</a>
-  </nav>
+    <!-- 导航栏 -->
+    <nav class="nav-bar">
+        <ul>
+            <li class="nav-item" data-target="home">首页</li>
+            <li class="nav-item" data-target="blog">我的日志</li>
+            <li class="nav-item active" data-target="resume">我的简历</li>
+            <li class="nav-item" data-target="photo">我的相册</li>
+            <li class="nav-item" data-target="honor">我的成绩</li>
+        </ul>
+    </nav>
 
-  <!-- 主体内容 -->
-  <div class="blog-container">
-    <!-- 左侧：关于我 -->
-    <aside class="blog-sidebar">
-      <h3>关于我</h3>
-      <img src="https://picsum.photos/id/237/150/150" alt="头像" class="avatar">
-      <p><strong>姓名：</strong>吴为</p>
-      <p><strong>性别：</strong>男</p>
-      <p><strong>爱好：</strong>听歌 踢足球 打游戏</p>
-      <p><strong>学号：</strong>23170404018</p>
-      <p><strong>班级：</strong>大数据4班>da>
-      <p><strong>专业：</strong>数据科学与大数据技术</p>
-    </aside>
+    <!-- 主内容区 -->
+    <div class="main-container">
+        <!-- 左侧个人简介 -->
+        <aside class="profile-sidebar">
+            <div class="profile-card">
+                <img src="sunyang.jpg" alt="孙杨头像" class="profile-img">
+                <h3 class="profile-name">孙杨</h3>
+                <ul class="profile-info-list">
+                    <li><span>姓名：</span>孙杨</li>
+                    <li><span>性别：</span>男</li>
+                    <li><span>生日：</span>1991年12月1日</li>
+                    <li><span>邮箱：</span>email protected</li>
+                    <li><span>血型：</span>o型</li>
+                    <li><span>爱好：</span>游泳 钓鱼 健身</li>
+                </ul>
+            </div>
+        </aside>
 
-    <!-- 右侧：文章内容 -->
-    <main class="blog-main">
-      <h2>《活着》节选</h2>
-      <p>那一年的整个夏天，我如同一只乱飞的麻雀，游荡在知了和阳光充斥的村舍田野。我喜欢喝农民那种带有苦味的茶水，他们的茶桶就放在田埂的树下，我毫无顾忌地拿起漆满茶垢的茶碗舀水喝，还把自己的水壶灌满，与田里干活的男人说上几句话，在姑娘因我而起的窃窃私笑里扬长而去。我曾经和一位守着瓜田的老人聊了整整一个下午，这是我有生以来吃得最多的一次，当我站起来告辞时，突然发现自己像个孕妇一样步履艰难了。然后我与一位当上了祖母的女人坐在门槛上，她编着草鞋为我唱了一支《十月怀胎》。我最喜欢的是傍晚来到时，坐在农民的屋前，看着他们将提上的井水泼在地上，压住蒸腾的尘土，夕阳的光芒在树梢上照射下来，拿一把他们递过来的扇子，尝尝他们和盐一样咸的咸菜，看看几个年轻女人，和男人们说着话。</p>
-      <p>我头戴宽边草帽，脚上穿着拖鞋，一条毛巾挂在身后的皮带上，让它像尾巴似的拍打着我的屁股。我整日张大嘴巴打着哈欠，散漫地走在田间小路上，我的拖鞋吧嗒吧嗒，把那些小道弄得尘土飞扬，仿佛是车轮滚滚而过的情景。</p>
-      <p>我到处游荡，已经弄不清哪些村庄我曾经去过，哪些我没有去过。我走近一个村子时，常会听到孩子的喊叫：“那个老打呵欠的人又来了。”</p>
-      <p class="copyright">版权所有©……</p>
-    </main>
-  </div>
+        <!-- 右侧详细内容 -->
+        <main class="content-main">
+            <!-- 基本资料 -->
+            <section class="content-section">
+                <h4 class="section-title">基本资料</h4>
+                <ul class="info-list">
+                    <li><span>姓名：</span>谭靖</li>
+                    <li><span>性别：</span>男</li>
+                    <li><span>学号：</span>23170404009</li>
+                    <li><span>班级：</span>大数据4班</li>
+                    <li><span>户籍地：</span>浙江省杭州市</li>
+                </ul>
+            </section>
 
-  <script src="script.js"></script>
+            <!-- 个人信息 -->
+            <section class="content-section">
+                <h4 class="section-title">个人信息</h4>
+                <ul class="info-list">
+                    <li><span>手机：</span>15573288888</li>
+                    <li><span>邮箱：</span>123456789@qq.com</li>
+                    <li><span>QQ：</span>123456789</li>
+                    <li><span>学历：</span>全日制本科</li>
+                    <li><span>毕业专业：</span>浙江大学体育系</li>
+                    <li><span>血型：</span>O型</li>
+                    <li><span>国籍：</span>你猜？</li>
+                    <li><span>体型：</span>匀称</li>
+                </ul>
+            </section>
+
+            <!-- 获得奖励 -->
+            <section class="content-section">
+                <h4 class="section-title">获得奖励</h4>
+                <ul class="info-list">
+                    <li>伦敦奥运会男子400米自由泳冠军</li>
+                    <li>伦敦奥运会男子1500米自由泳冠军</li>
+                    <li>伦敦奥运会男子200米自由泳亚军</li>
+                </ul>
+            </section>
+
+            <!-- 自我评价 -->
+            <section class="content-section">
+                <h4 class="section-title">自我评价</h4>
+                <p class="self-desc">
+                    忠实诚信讲原则，说到做到，决不推卸责任有自制力，做事情始终坚持有始有终，肯学习,有问题不逃避,愿意虚心向他人学习;不以自我为中心;愿意以谦虚态度赞扬接纳优越者,权威者;会用100%的热情和精力投入到工作中;为人诚恳,性格开朗,积极进取,适应力强、勤奋好学、脚踏实地，有较强的团队精神,工作积极进取,态度认真。<br>
+                    我的优势，所有的长短板都是最后的100米和200米的冲刺，在舒服的情况下，我的腿部是非常强的，我们可以看在最后100米的时候他冲刺的时候，腿像小螺旋桨一样。
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-
 </html>

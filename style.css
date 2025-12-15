@@ -1,116 +1,171 @@
-/* 全局样式 */
+/* 全局重置 */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "微软雅黑", sans-serif;
-}
-body {
-  background-color: #c1d5e0;
-  color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "微软雅黑", sans-serif;
 }
 
-/* 头部背景 */
-.blog-header {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
+body {
+    background-color: #f0e6d2;
+    color: #333;
 }
-.header-bg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.8);
+
+/* 顶部横幅 */
+.header-banner {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background: url("banner-bg.jpg") no-repeat center;
+    background-size: cover;
+    text-align: center;
+}
+
+.banner-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    color: #8B4513;
+    text-shadow: 1px 1px 2px #fff;
 }
 
 /* 导航栏 */
-.blog-nav {
-  background-color: #334455;
-  padding: 12px 0;
-  text-align: center;
+.nav-bar {
+    background-color: #e0d2b8;
+    border-bottom: 1px solid #c9b79c;
 }
+
+.nav-bar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
 .nav-item {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 20px;
-  font-size: 16px;
-}
-.nav-item.active {
-  color: #ffd700;
-  font-weight: bold;
-}
-.nav-item:hover {
-  color: #ffd700;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #5a452d;
+    transition: background-color 0.3s;
 }
 
-/* 主体容器 */
-.blog-container {
-  display: flex;
-  max-width: 1200px;
-  margin: 20px auto;
-  gap: 20px;
-  padding: 0 20px;
+.nav-item.active, .nav-item:hover {
+    background-color: #d4c2a8;
+    color: #8B4513;
+    font-weight: bold;
 }
 
-/* 左侧侧边栏 */
-.blog-sidebar {
-  width: 250px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-.blog-sidebar h3 {
-  color: #334455;
-  border-bottom: 2px solid #c1d5e0;
-  padding-bottom: 8px;
-  margin-bottom: 15px;
-}
-.avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin: 0 auto 15px;
-  display: block;
-  border: 3px solid #c1d5e0;
-}
-.blog-sidebar p {
-  margin: 8px 0;
-  line-height: 1.6;
+/* 主容器 */
+.main-container {
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+    gap: 20px;
 }
 
-/* 右侧文章内容 */
-.blog-main {
-  flex: 1;
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-.blog-main h2 {
-  color: #334455;
-  margin-bottom: 20px;
-  border-left: 4px solid #334455;
-  padding-left: 10px;
-}
-.blog-main p {
-  line-height: 1.8;
-  margin-bottom: 15px;
-  text-indent: 2em;
-}
-.copyright {
-  text-align: right;
-  color: #666;
-  font-size: 14px;
-  margin-top: 30px;
+/* 左侧个人简介 */
+.profile-sidebar {
+    width: 25%;
 }
 
-/* 响应式适配（手机端） */
+.profile-card {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #d4c2a8;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.profile-name {
+    font-size: 20px;
+    color: #8B4513;
+    margin-bottom: 15px;
+}
+
+.profile-info-list {
+    list-style: none;
+    text-align: left;
+    font-size: 14px;
+}
+
+.profile-info-list li {
+    margin: 8px 0;
+}
+
+.profile-info-list span {
+    color: #8B4513;
+    font-weight: bold;
+}
+
+/* 右侧主内容 */
+.content-main {
+    width: 75%;
+}
+
+.content-section {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #d4c2a8;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    padding: 8px 0;
+    border-bottom: 1px solid #d4c2a8;
+    color: #8B4513;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.info-list {
+    list-style: none;
+    font-size: 14px;
+}
+
+.info-list li {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.info-list span {
+    color: #8B4513;
+    font-weight: bold;
+}
+
+.self-desc {
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* 响应式适配 */
 @media (max-width: 768px) {
-  .blog-container {
-    flex-direction: column;
-  }
-  .blog-sidebar {
-    width: 100%;
-  }
+    .main-container {
+        flex-direction: column;
+    }
+    .profile-sidebar, .content-main {
+        width: 100%;
+    }
+    .nav-item {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
 }
